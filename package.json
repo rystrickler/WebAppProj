@@ -1,0 +1,11 @@
+{
+  "name": "UploadDisplayImage",
+  "author": "Myles Harris",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.15.3",
+    "formidable": "^1.2.2",
+    "mv": "^2.1.1"
+  }
+}

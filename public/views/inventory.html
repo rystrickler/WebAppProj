@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--  
+for user
+keep track of id and add one evry time new user is created
+dont worry about encrypting
+keep password stuff simple
+ -->
+<html>
+  <head>
+    <title>Ajax</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+ 
+  <body>  
+    <h1 style="color:pink;text-align:center">Your Inventory</h1>
+    <hr>
+<fieldset>
+ <legend style="color:pink;text-align:center">Your Sonny Angels</legend>
+  </fieldset>
+<br>
+<br>
+    <form action = "#">
+      <fieldset>
+      <legend style="color:pink;text-align:center"> Add Sonny Angels</legend>
+    <select id="select1" onChange="getElementById('front_image1').src='/images/'+this.value;">
+    <option >Please Select One</option>
+    <option value="catLife.jpg">Cat Life Series</option>
+    <option value="flowerGift.jpg">Flower Gift Series</option>
+  </select>
+   <img src="/images/" id="front_image1" />
+
+
+   
+    <select id="select" onChange="getElementById('front_image2').src='/images/'+this.value;">
+
+    <option >Please Select One</option>
+    <option >None</option>
+    <option value="calico.jpg">Calico</option>
+
+    <option value="silvertab.jpg">Silver Tabby</option>
+
+    <option value="tuxedo.jpg">Tuxedo</option>
+
+    <option value="siamese.jpg">Siamese</option>
+
+    <option value="white.jpg">White</option>
+
+    <option value="bb.jpg">Brown & Black</option>
+
+    <option value="bluishg.jpg">Bluish Gray</option>
+
+    <option value="redtab.jpg">Red Tabby</option>
+
+    <option value="black.jpg">Black</option>
+
+    <option value="luckyO.jpg">Lucky Orange</option>
+
+    <option value="luckyPi.jpg">Lucky Pink</option>
+
+    <option value="luckyPur.jpg">Lucky Purple</option>
+
+    <option value="happyP.jpg">Happy Pink</option>
+
+    <option value="happyPRA.jpg">Happy Pink Robby Angel</option>
+  </select>
+  <img src="/images/" id="front_image2" />
+
+<select id="select2" onChange="getElementById('front_image').src='/images/'+this.value;">
+
+    <option >Please Select One</option>
+    <option >None</option>
+    <option value="sunflowerLB.jpg">Sunflower Lion Blue</option>
+
+    <option value="sunflowerLMG.jpg">Sunflower Lion Mint Green</option>
+
+    <option value="roseLP.jpg">Rose Lion Pink</option>
+
+    <option value="roseLO.jpg">Rose Lion Yellow</option>
+
+    <option value="daisyLLG.jpg">Daisy Lion Lime Green</option>
+
+    <option value="daisyLO.jpg">Daisy Lion Orange</option>
+
+    <option value="sunflowerLR.jpg">Sunflower Lion Rainbow</option>
+
+    <option value="robbyLR.jpg">Robby Lion Rainbow</option>
+
+  </select>
+  <img src="/images/" id="front_image" />
+     <input onclick=setAction("Create") type="submit" value="Add">
+</fieldset>
+<br>
+<br>
+
+ <input id="tradeButton" type="button" value="Trade with Users" />
+     
+   <!--    
+
+    <select onChange="getElementById('front_image').src='/images/'+this.value+'.jpg';">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <img src="/images/1.jpg" id="front_image" />
+
+
+    <input id="createButton" type="button" value="Create" /> -->
+
+   </form>
+   <hr>
+   
+  <ul id="list"></ul>  
+
+  <script src="js/inventory.js"></script>
+
+  <script>  
+      function requestClicked(){
+        //location.href = 'http://localhost:3000/page2';
+        location.href = './trade';
+        return false;
+      }
+      $(document).ready(function(){        
+        $("#tradeButton").click(requestClicked);
+      });     
+
+function check(){
+  if(document.getElementById('front_image1').value == 'catLife.jpg')
+  {
+    document.getElementById('front_image2').disabled=false;
+    document.getElementById('front_image').disabled=true;
+  }
+  else if (document.getElementById('front_image1').value == 'flowerGift.jpg')
+  {
+    document.getElementById('front_image2').disabled=true;
+    document.getElementById('front_image').disabled=false;
+  }
+}
+
+    </script>   
+ 
+  </body>
+</html>  

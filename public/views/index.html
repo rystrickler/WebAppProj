@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--  
+for user
+keep track of id and add one evry time new user is created
+dont worry about encrypting
+keep password stuff simple
+ -->
+<html>
+  <head>
+    <title>Ajax</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+ 
+  <body>  
+    <div style="color:pink;text-align:center">
+    <img src="https://i.pinimg.com/236x/9a/ef/2e/9aef2eb2d03496045b2e791c21a3a50f.jpg" height='80' width='80'>
+    <h1 style="color:pink;text-align:center">Sonny Angel Trading Site</h1>
+      <fieldset>
+      <legend style="color:pink;text-align:center">Login</legend>
+    <label for = "user" style="color:pink;text-align:center">Username:</label>
+    <br>
+    <input id="user" name="user" type="text" placeholder="Enter Username">
+    <br>
+    <label for="passw">Password:</label>
+    <br>
+   <input type="password" placeholder="Enter Password" id = "passw" name="passw">
+    <br>
+    <input type="button" id="login" value="Login">  
+    <input type="button" id="clearForm" value="Clear" onclick=clearFormClicked>  
+       
+    <br>
+</fieldset>
+
+      <input type="button" value="Create" id="createButton">
+   </div>
+
+  <script src="js/home.js"></script>
+ 
+  </body>
+</html>  
